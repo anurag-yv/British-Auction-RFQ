@@ -8,7 +8,8 @@ const rfqSchema = new mongoose.Schema({
   forcedCloseTime: Date,
   triggerWindow: Number, // X
   extensionDuration: Number, // Y
-  status: { type: String, default: "ACTIVE" }
+  status: { type: String, default: "ACTIVE" },
+  pickupDate: Date,
 });
 
 module.exports = mongoose.model("RFQ", rfqSchema);

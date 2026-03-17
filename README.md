@@ -19,8 +19,9 @@ This platform is ideal for organizations that want a dynamic and transparent auc
 
 ### **Auction Logic**
 - Automatic extension if:  
-  - A bid is received within the trigger window.  
-  - Lowest bidder (L1) changes.  
+   a) Any bid in last X minutes
+   b) Any Supplier Rank Change in last X minutes
+   c) Only Lowest Bidder (L1) Rank Change in last X minutes 
 - Real-time activity log for bid submissions and auction extensions.  
 - Dynamic auction status: `Active`, `Closed`, `Force Closed`, `Not Started`.
 

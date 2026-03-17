@@ -1,4 +1,4 @@
-# 🇬🇧 British Auction RFQ System
+British Auction RFQ System
 
 ## 📝 Project Overview
 The **British Auction RFQ System** is a web-based platform for managing auctions in a **British auction format**. Suppliers can place bids on RFQs (Request For Quotes) in real-time, while the system automatically monitors auction activity, extends auctions based on configurable triggers, and maintains a detailed activity log.

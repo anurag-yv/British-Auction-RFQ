@@ -1,4 +1,4 @@
-// controllers/bidController.js
+
 const RFQ = require("../models/RFQ");
 const Bid = require("../models/Bid");
 const Log = require("../models/Log");
@@ -9,7 +9,7 @@ exports.placeBid = async (req, res) => {
     const { rfqId, supplier, price } = req.body;
     const currentTime = new Date();
 
-    // Save bid
+
     const bid = await Bid.create({ rfqId, supplier, price });
 
     const rfq = await RFQ.findById(rfqId);
@@ -20,7 +20,6 @@ exports.placeBid = async (req, res) => {
 
       let newClose = new Date(rfq.closeTime.getTime() + rfq.extensionDuration * 60000);
 
-      // IMPORTANT constraint
       if (newClose > rfq.forcedCloseTime) {
         newClose = rfq.forcedCloseTime;
       }
@@ -38,7 +37,6 @@ exports.placeBid = async (req, res) => {
       }
     }
 
-    // Log bid
     await Log.create({
       rfqId,
       type: "BID",

@@ -1,4 +1,4 @@
-// models/RFQ.js
+
 const mongoose = require("mongoose");
 
 const rfqSchema = new mongoose.Schema({

@@ -1,4 +1,4 @@
-// controllers/rfqController.js
+
 const Bid = require("../models/Bid");
 
 exports.getBids = async (req, res) => {
